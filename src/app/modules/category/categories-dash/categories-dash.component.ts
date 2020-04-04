@@ -28,11 +28,7 @@ export class CategoriesDashComponent implements OnInit {
   categories: Category[];
 
   ngOnInit(): void {
-    this._service.findAll()
-        .subscribe(data => {
-          this.categories = data;
-        });
-  }
+    this._loadData();  }
 
   edit(id){
     console.log('edit');
@@ -41,13 +37,20 @@ export class CategoriesDashComponent implements OnInit {
 
   delete(id){
     this._service.deleteByID(id).subscribe(data => {
-      this._notificator.sucess("Categoria removida com sucesso!");
-
+      this._notificator.sucess("Category removed successfully!");
+      this._loadData();
     });
   }
 
   newCategory(){
     this._router.navigate([`category-editor/new`]);
+  }
+
+  private _loadData(){
+    this._service.findAll()
+        .subscribe(data => {
+          this.categories = data;
+        });
   }
 
 

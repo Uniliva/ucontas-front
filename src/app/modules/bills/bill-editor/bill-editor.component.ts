@@ -46,7 +46,6 @@ export class BillEditorComponent implements OnInit {
         this._isEditMode = true;
         this._bill = this._convertDateBill(data);
         this._loadForm();
-        debugger
       });
     }
 

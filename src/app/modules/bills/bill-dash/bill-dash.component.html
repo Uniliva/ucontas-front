@@ -1,1 +1,49 @@
-<p>bill-dash works!</p>
+<div class="container card">
+
+  <div class="border-bottom">
+    <br>
+    <h2><strong>Bills</strong></h2>
+  </div>
+
+  <br>
+
+  <div>
+    <div class="d-flex justify-content-end">
+      <button type="button" class="btn btn-sm btn-success" (click)="newBill()"> <fa-icon [icon]="faPlus"></fa-icon> New bill</button>
+    </div>
+    <br>
+    <table class="table table-sm ">
+      <thead class="thead-dark">
+        <tr class="d-flex">
+          <th class="col-1">ID</th>
+          <th class="col-5">Description</th>
+          <th class="col-3">category</th>
+          <th class="col-1">value</th>
+          <th class="col-1">Date</th>
+          <th class="col-1">Action</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr class="d-flex" *ngFor="let b of bills">
+          <th class="col-1">{{b.id}}</th>
+          <td class="col-5">{{b.description}}</td>
+          <td class="col-3">{{b.category.name}}</td>
+          <td class="col-1">{{b.value}}</td>
+          <td class="col-1">{{b.dateBill}}</td>
+          <td class="col-1">
+            <div class="d-flex justify-content-around">
+              <button type="button" class="btn btn-sm btn-primary" (click)="edit(b.id)">
+                <fa-icon [icon]="faEdit"></fa-icon>
+              </button>
+              <button type="button" class="btn btn-sm btn-danger" (click)="delete(b.id)">
+                <fa-icon [icon]="faTrash"></fa-icon>
+              </button>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

@@ -23,7 +23,7 @@ export class BillService {
   ) {}
 
   findAll() {
-    return this._http.get(this._url).pipe(
+    return this._http.get<Bill[]>(this._url).pipe(
       catchError((err) => {
         this._notificator.error(err.error);
         throw err;
