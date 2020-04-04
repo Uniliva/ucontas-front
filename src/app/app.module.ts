@@ -3,6 +3,7 @@ import { CategoryModule } from './modules/category/category.module';
 import { CoreModule } from './core/core.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -16,7 +17,8 @@ import { AppComponent } from './app.component';
     AppRoutingModule,
     CoreModule,
     BillsModule,
-    CategoryModule
+    CategoryModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
