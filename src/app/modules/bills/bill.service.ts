@@ -1,14 +1,13 @@
-import { DateUtilsService } from './../../core/services/date-utils.service';
 import { Injectable } from "@angular/core";
-
 import { catchError } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 import { environment } from "./../../../environments/environment.prod";
-
 import { Bill } from "./../../shared/model/bill";
+
 import { NotificatorService } from "./../../core/services/notificator.service";
+import { DateUtilsService } from './../../core/services/date-utils.service';
 
 @Injectable({
   providedIn: "root",

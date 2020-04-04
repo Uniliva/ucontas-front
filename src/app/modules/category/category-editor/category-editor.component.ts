@@ -1,11 +1,14 @@
-import { Category } from "./../../../shared/model/category";
-import { NotificatorService } from "./../../../core/services/notificator.service";
-import { Router, ActivatedRoute } from "@angular/router";
-import { CategoryService } from "./../category.service";
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import { Router, ActivatedRoute } from "@angular/router";
 
 import { faReply, faSave  } from '@fortawesome/free-solid-svg-icons';
+
+import { Category } from "./../../../shared/model/category";
+
+import { NotificatorService } from "./../../../core/services/notificator.service";
+import { CategoryService } from "./../category.service";
+
 
 @Component({
   selector: "app-category-editor",

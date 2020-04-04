@@ -1,13 +1,16 @@
-import { DateUtilsService } from "./../../../core/services/date-utils.service";
-import { Category } from "./../../../shared/model/category";
-import { CategoryService } from "./../../category/category.service";
-import { Bill } from "./../../../shared/model/bill";
-import { faReply, faSave } from "@fortawesome/free-solid-svg-icons";
-import { NotificatorService } from "./../../../core/services/notificator.service";
-import { Router, ActivatedRoute } from "@angular/router";
-import { BillService } from "./../bill.service";
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
 import { Component, OnInit } from "@angular/core";
+import { Router, ActivatedRoute } from "@angular/router";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+
+import { faReply, faSave } from "@fortawesome/free-solid-svg-icons";
+
+import { Category } from "./../../../shared/model/category";
+import { Bill } from "./../../../shared/model/bill";
+
+import { DateUtilsService } from "./../../../core/services/date-utils.service";
+import { CategoryService } from "./../../category/category.service";
+import { NotificatorService } from "./../../../core/services/notificator.service";
+import { BillService } from "./../bill.service";
 
 @Component({
   selector: "app-bill-editor",
@@ -104,10 +107,8 @@ export class BillEditorComponent implements OnInit {
       ],
       value: [this._bill.value, [Validators.required]],
       category: [this._bill.category, [Validators.required]],
-      dateBill: [this._bill.dateBill, [Validators.required]],
+      dateBill: [this._dateUtil.convertToStringWithDashUSA(this._bill.dateBill), [Validators.required]]
     });
-
-    console.log(this.formBill);
   }
 
   private _convertDateBill(bill: Bill) {

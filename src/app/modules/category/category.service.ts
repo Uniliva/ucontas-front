@@ -1,19 +1,17 @@
 import { Injectable } from "@angular/core";
-
 import { catchError } from "rxjs/operators";
 import { HttpClient } from "@angular/common/http";
 import { Observable } from "rxjs";
 
 import { environment } from "./../../../environments/environment.prod";
-
 import { Category } from "./../../shared/model/category";
+
 import { NotificatorService } from "./../../core/services/notificator.service";
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: "root",
 })
 export class CategoryService {
-
   _url = `${environment.base_url}/v1/categories`;
 
   constructor(

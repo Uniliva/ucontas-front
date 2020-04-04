@@ -11,6 +11,10 @@ export class DateUtilsService {
     return this.datePipe.transform(data, 'dd-MM-yyyy').toString();
   }
 
+  convertToStringWithDashUSA(data: Date) {
+    return this.datePipe.transform(data, 'yyyy-MM-dd');
+  }
+
   convertDateStringWithDashToDate(dataString: string) {
     let data = null;
     if (dataString) {

@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 
-
 import { faWallet } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
