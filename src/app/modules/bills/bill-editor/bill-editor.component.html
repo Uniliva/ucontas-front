@@ -1,1 +1,62 @@
-<p>bill-editor works!</p>
+<div class="container card">
+
+  <div class="border-bottom">
+    <br>
+    <h2><strong>{{title}}</strong></h2>
+  </div>
+
+  <br>
+
+  <form [formGroup]="formBill" (ngSubmit)="save()" autocomplete="off">
+
+    <div class="row">
+      <div class="form-group col-2">
+        <label for="idBill">ID</label>
+        <input type="number" class="form-control" id="idBill" formControlName="id" disabled>
+      </div>
+      <div class="form-group col-10">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" formControlName="description">
+      </div>
+
+
+    </div>
+
+    <div class="row">
+      <div class="form-group  col-5">
+        <label for="category">Category</label>
+        <select class="form-control" id="category"  [compareWith]="compareFunction" formControlName="category">
+          <option [ngValue]="c" *ngFor="let c of categories" >{{c.name}}</option>
+        </select>
+      </div>
+
+      <div class="form-group col-2">
+        <label for="valueBill">Value</label>
+        <input type="number" class="form-control" id="valueBill" formControlName="value">
+      </div>
+      <div class="form-group col-5">
+        <label for="dateBill">Date bill</label>
+        <input type="date" class="form-control"  id="dateBill" value="formBill.controls.dateBill.value" formControlName="dateBill">
+      </div>
+</div>
+
+<div class="row">
+  <div class=" col-12 d-flex justify-content-end">
+    <button type="button" class="btn btn-sm btn-danger" (click)="goBack()">
+      <fa-icon [icon]="faReply"></fa-icon> back
+    </button>
+    <button type="submit" class="btn btn-sm btn-success" [disabled]="formBill.invalid">
+      <fa-icon [icon]="faSave"></fa-icon> save
+    </button>
+  </div>
+</div>
+
+<br>
+
+
+
+</form>
+
+
+
+</div>

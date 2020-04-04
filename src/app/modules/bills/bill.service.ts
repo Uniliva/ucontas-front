@@ -1,3 +1,4 @@
+import { DateUtilsService } from './../../core/services/date-utils.service';
 import { Injectable } from "@angular/core";
 
 import { catchError } from "rxjs/operators";
@@ -13,11 +14,12 @@ import { NotificatorService } from "./../../core/services/notificator.service";
   providedIn: "root",
 })
 export class BillService {
-  _url = `${environment.base_url}/v1/categories`;
+  _url = `${environment.base_url}/v1/bills`;
 
   constructor(
     private _http: HttpClient,
-    private _notificator: NotificatorService
+    private _notificator: NotificatorService,
+    private _dateUtil: DateUtilsService
   ) {}
 
   findAll() {
@@ -39,12 +41,14 @@ export class BillService {
   }
 
   save(bill: Bill) {
-    return this._http.post<Bill>(this._url, bill).pipe(
-      catchError((err) => {
-        this._notificator.error(err.error);
-        throw err;
-      })
-    );
+    return this._http
+      .post<Bill>(this._url, this._convertDateBillToString(bill))
+      .pipe(
+        catchError((err) => {
+          this._notificator.error(err.error);
+          throw err;
+        })
+      );
   }
 
   deleteByID(id) {
@@ -57,11 +61,22 @@ export class BillService {
   }
 
   update(bill: Bill) {
-    return this._http.put<Bill>(this._url, bill).pipe(
-      catchError((err) => {
-        this._notificator.error(err.error);
-        throw err;
-      })
-    );
+    return this._http
+      .put<Bill>(this._url, this._convertDateBillToString(bill))
+      .pipe(
+        catchError((err) => {
+          this._notificator.error(err.error);
+          throw err;
+        })
+      );
+  }
+
+  private _convertDateBillToString(bill: Bill) {
+    const dateBill = bill.dateBill;
+    const nBill = {
+      ...bill,
+      dateBill: this._dateUtil.convertToStringWithDash(bill.dateBill),
+    };
+    return nBill;
   }
 }
