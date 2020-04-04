@@ -1,4 +1,10 @@
+
 import { Component, OnInit } from '@angular/core';
+
+import { Category } from './../../../shared/model/category';
+import { CategoryService } from './../category.service';
+
+import { faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-categories-dash',
@@ -7,9 +13,29 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriesDashComponent implements OnInit {
 
-  constructor() { }
+  faEdit = faEdit;
+  faTrash = faTrash;
+
+  constructor(
+    private _service: CategoryService
+  ) { }
+
+  categories: Category[];
 
   ngOnInit(): void {
+    this._service.findAll()
+        .subscribe(data => {
+          this.categories = data;
+        });
   }
+
+  edit(id){
+    console.log('edit');
+  }
+
+  delete(id){
+    console.log('delete');
+  }
+
 
 }

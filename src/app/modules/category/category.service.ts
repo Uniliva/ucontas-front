@@ -22,7 +22,7 @@ export class CategoryService {
   ) {}
 
   findAll() {
-    return this._http.get(this._url).pipe(
+    return this._http.get<Category[]>(this._url).pipe(
       catchError((err) => {
         this._notificator.error(err);
         throw err;
