@@ -7,10 +7,10 @@ export class NotificatorService {
   constructor() {}
 
   error(error) {
-    console.log("Ocorreu um erro!");
+    console.log(error.message);
   }
 
   sucess(msg) {
-    console.log("Sucesso!");
+    console.log(msg);
   }
 }

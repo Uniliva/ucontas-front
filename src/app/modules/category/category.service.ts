@@ -24,7 +24,7 @@ export class CategoryService {
   findAll() {
     return this._http.get<Category[]>(this._url).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );
@@ -33,7 +33,7 @@ export class CategoryService {
   findByID(id): Observable<any> {
     return this._http.get<Category>(`${this._url}/${id}`).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );
@@ -42,7 +42,7 @@ export class CategoryService {
   save(category: Category) {
     return this._http.post<Category>(this._url, category).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );
@@ -51,7 +51,7 @@ export class CategoryService {
   deleteByID(id) {
     return this._http.delete(`${this._url}/${id}`).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );
@@ -60,7 +60,7 @@ export class CategoryService {
   update(category: Category) {
     return this._http.put<Category>(this._url, category).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );

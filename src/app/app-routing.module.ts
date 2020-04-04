@@ -11,9 +11,11 @@ const routes: Routes = [
   { path: '', component: DashComponent },
   { path: 'dash', component: DashComponent },
   { path: 'bills', component: BillDashComponent },
-  { path: 'bill-editor', component: BillEditorComponent },
+  { path: 'bill-editor/new', component: BillEditorComponent },
+  { path: 'bill-editor/:id', component: BillEditorComponent },
   { path: 'categories', component: CategoriesDashComponent },
-  { path: 'category-editor', component: CategoryEditorComponent },
+  { path: 'category-editor/new', component: CategoryEditorComponent },
+  { path: 'category-editor/:id', component: CategoryEditorComponent },
 ];
 
 @NgModule({

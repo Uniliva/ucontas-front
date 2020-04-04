@@ -23,7 +23,7 @@ export class BillService {
   findAll() {
     return this._http.get(this._url).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );
@@ -32,7 +32,7 @@ export class BillService {
   findByID(id): Observable<any> {
     return this._http.get<Bill>(`${this._url}/${id}`).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );
@@ -41,7 +41,7 @@ export class BillService {
   save(bill: Bill) {
     return this._http.post<Bill>(this._url, bill).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );
@@ -50,7 +50,7 @@ export class BillService {
   deleteByID(id) {
     return this._http.delete(`${this._url}/${id}`).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );
@@ -59,7 +59,7 @@ export class BillService {
   update(bill: Bill) {
     return this._http.put<Bill>(this._url, bill).pipe(
       catchError((err) => {
-        this._notificator.error(err);
+        this._notificator.error(err.error);
         throw err;
       })
     );
