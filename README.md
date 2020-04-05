@@ -1,27 +1,34 @@
 # UcontasFront
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.4.
+Este é uma aplicação simples utilizabdo angular8+, que consome uma api simples de gerenciamento de contas desponivel [aqui](https://github.com/Uniliva/ucontas-api).
 
-## Development server
+Esta aplicação gera uma imagem do docker atraves do Travis CI, a imagem esta disponivel em: 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+---
 
-## Code scaffolding
+## Executando o projeto local
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Para executar o projeto a api mencionada anteriomente deve esta disponivel em _localhost:9090_, ou então altere o endpoint nos environment.
 
-## Build
+- Passo 1: Baixe o projeto
+- Passo 2: Instale as dependências
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+```typescript
+// Acesse a pasta do projeto e execute
+npm install
+```
+- Passo 3: execute
 
-## Running unit tests
+```
+ng serve
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Passo 4: Acesse em localhost:4200
 
-## Running end-to-end tests
+--- 
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+## Executando no docker 
 
-## Further help
+Você tambem, pode usar essa aplicação atraves do docker, para isso acesse : https://github.com/Uniliva/ucontas-installer e siga as intruções para instalação.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+---

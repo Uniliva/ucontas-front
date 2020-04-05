@@ -1,1 +1,87 @@
-<p>dash works!</p>
+<div class="container card">
+
+  <div class="border-bottom">
+    <br>
+    <h3><strong>Ucontas </strong></h3>
+  </div>
+
+  <h3 id="na-real">Na real</h3>
+  <p>Isso aqui (esta pagina) era para ser um bashboard, que ia mostra graficos contas (bills) por
+    categorias (categories), mas não ia dar tempo de finalizar então deixei pra lá ... por hora ...</p>
+
+  <hr>
+  <h3 id="contextualizando">Contextualizando</h3>
+  <p>Este é um projeto que tem como finalidade demostrar as habilidade com:</p>
+  <p>• Angular 8+<br>
+    • Java 8+<br>
+    • Rest<br>
+    • Spring Boot<br>
+    • JUnit<br>
+    • Oracle 12g<br>
+    • Docker</p>
+  <p>Ele está dividido e 3 partes.</p>
+  <hr>
+  <h3 id="parte-1-ucontas-api">Parte 1: Ucontas-api</h3>
+  <p>Foi criada uma api rest simples para contas com categorização, utilizando:</p>
+  <ul>
+    <li>Spring boot</li>
+    <li>Java 8</li>
+    <li>Spring Jpa</li>
+    <li>Oracle 12c</li>
+    <li>h3 para demostração testes</li>
+    <li>Junit</li>
+    <li>Api de consulta cep, para demostração de serviços rest</li>
+    <li>Swagger</li>
+    <li>CodeCov para analise de cobertura de teste</li>
+    <li>Travis CI pra build e geração de image docker</li>
+  </ul>
+  <p><strong>Links uteis para o projeto:</strong></p>
+  <ul>
+    <li>Projeto github : <a data-from-md title='https://github.com/Uniliva/ucontas-api'
+        href='https://github.com/Uniliva/ucontas-api' type='' target="_blank">https://github.com/Uniliva/ucontas-api</a>
+    </li>
+    <li>Projeto no Travis : <a data-from-md title='https://travis-ci.com/Uniliva/Ucontas'
+        href='https://travis-ci.com/Uniliva/Ucontas' type='' target="_blank">https://travis-ci.com/Uniliva/Ucontas</a>
+    </li>
+    <li>CodeCov : <a data-from-md title='https://codecov.io/gh/Uniliva/Ucontas'
+        href='https://codecov.io/gh/Uniliva/Ucontas' type='' target="_blank">https://codecov.io/gh/Uniliva/Ucontas</a>
+    </li>
+  </ul>
+  <hr>
+  <h3 id="parte-2-front-end">Parte 2: Front-end</h3>
+  <p>Este é uma palicação simples utilizabdo angular8+, que consome a api descrita anteriomente</p>
+  <p><strong>Links uteis para o projeto:</strong></p>
+  <ul>
+    <li>Projeto github : <a data-from-md title='https://github.com/Uniliva/ucontas-front'
+        href='https://github.com/Uniliva/ucontas-front' type=''
+        target="_blank">https://github.com/Uniliva/ucontas-front</a></li>
+    <li>Projeto no Travis : <a data-from-md title='https://travis-ci.com/Uniliva/ucontas-front'
+        href='https://travis-ci.com/Uniliva/ucontas-front' type=''
+        target="_blank">https://travis-ci.com/Uniliva/ucontas-front</a></li>
+    <li>Não fiz testes :( , não ida dar tempo ...</li>
+  </ul>
+  <hr>
+  <h3 id="parte-3-dockerizado">Parte 3: Dockerizado</h3>
+  <p>Para demostrar a parte de docker, foi criado images com os projetos descritos anteriormente, e para facilitar a
+    implatação foi criado um projeto a parte que faz a &quot;instalação&quot; do banco, da api e do front, usando
+    docker-compose.</p>
+  <p>Durante build realizado pelo Travis CI, e são criadas imagens que são enviadas para o docker hub.</p>
+  <p>Para mais detalhes de uma olhada no projeto.</p>
+  <p><strong>Links uteis para o projeto:</strong></p>
+  <ul>
+    <li>Projeto github : <a data-from-md title='https://github.com/Uniliva/ucontas-installer'
+        href='https://github.com/Uniliva/ucontas-installer' type=''
+        target="_blank">https://github.com/Uniliva/ucontas-installer</a>
+    </li>
+    <li>Imagem da api : <a data-from-md title='https://hub.docker.com/repository/docker/uniliva/ucontas-api'
+        href='https://hub.docker.com/repository/docker/uniliva/ucontas-api' type=''
+        target="_blank">https://hub.docker.com/repository/docker/uniliva/ucontas-api</a></li>
+    <li>Imagem do banco : <a data-from-md title='https://hub.docker.com/repository/docker/uniliva/oracle_db'
+        href='https://hub.docker.com/repository/docker/uniliva/oracle_db' type=''
+        target="_blank">https://hub.docker.com/repository/docker/uniliva/oracle_db</a></li>
+    <li>Imagem do front : <a data-from-md title='https://hub.docker.com/repository/docker/uniliva/oracle_db'
+        href='https://hub.docker.com/repository/docker/uniliva/oracle_db' type=''
+        target="_blank">https://hub.docker.com/repository/docker/uniliva/oracle_db</a></li>
+  </ul>
+
+</div>
