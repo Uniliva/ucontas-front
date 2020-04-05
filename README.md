@@ -9,7 +9,18 @@ Esta aplicação gera uma imagem do docker atraves do Travis CI (https://travis-
 
 ---
 
-## Executando o projeto local
+## Acessando o projeto 
+
+### Heroku
+
+Para facilitar o acesso, esse projeto foi ajustado, através da branch _heroku-version_, para ser executado no heroku:
+
+ucontas-front: https://ucontas-front.herokuapp.com/
+swagger ucontas-api: https://ucontas-api.herokuapp.com/swagger-ui.html
+
+---
+
+### Localmente
 
 Para executar o projeto a api mencionada anteriomente deve esta disponivel em _localhost:9090_, ou então altere o endpoint nos environment.
 
@@ -30,8 +41,8 @@ ng serve
 
 --- 
 
-## Executando no docker 
+### Com docker 
 
-Você tambem, pode usar essa aplicação atraves do docker, para isso acesse : https://github.com/Uniliva/ucontas-installer e siga as intruções para instalação.
+Você também, pode usar essa aplicação através do docker, para isso acesse : https://github.com/Uniliva/ucontas-installer e siga as intruções para instalação.
 
 ---
