@@ -1,6 +1,9 @@
 # UcontasFront
 
+[![Build Status](https://travis-ci.com/Uniliva/ucontas-front.svg?branch=master)](https://travis-ci.com/Uniliva/ucontas-front)
+
 Este é uma aplicação simples utilizabdo angular8+, que consome uma api simples de gerenciamento de contas desponivel [aqui](https://github.com/Uniliva/ucontas-api).
+
 
 Esta aplicação gera uma imagem do docker atraves do Travis CI (https://travis-ci.com/github/Uniliva/ucontas-front), a imagem esta disponivel em: https://hub.docker.com/repository/docker/uniliva/ucontas-front
 
@@ -23,7 +26,7 @@ npm install
 ng serve
 ```
 
-- Passo 4: Acesse em localhost:4200
+- Passo 4: Acesse em _localhost:4200_
 
 --- 
 
