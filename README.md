@@ -2,7 +2,7 @@
 
 Este é uma aplicação simples utilizabdo angular8+, que consome uma api simples de gerenciamento de contas desponivel [aqui](https://github.com/Uniliva/ucontas-api).
 
-Esta aplicação gera uma imagem do docker atraves do Travis CI, a imagem esta disponivel em: 
+Esta aplicação gera uma imagem do docker atraves do Travis CI (https://travis-ci.com/github/Uniliva/ucontas-front), a imagem esta disponivel em: https://hub.docker.com/repository/docker/uniliva/ucontas-front
 
 ---
 
