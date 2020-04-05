@@ -1,21 +1,14 @@
-import { RouterModule } from '@angular/router';
+import { RouterModule } from "@angular/router";
 
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { NavbarComponent } from './components/navbar/navbar.component';
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
+import { NavbarComponent } from "./components/navbar/navbar.component";
 
 @NgModule({
-  declarations: [
-  NavbarComponent],
-  imports: [
-    CommonModule,
-    FontAwesomeModule,
-    RouterModule
-  ],
-  exports:[
-    NavbarComponent
-  ]
+  declarations: [NavbarComponent],
+  imports: [CommonModule, FontAwesomeModule, RouterModule],
+  exports: [NavbarComponent],
 })
-export class CoreModule { }
+export class CoreModule {}

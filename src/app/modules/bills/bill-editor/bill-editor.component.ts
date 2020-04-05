@@ -79,15 +79,16 @@ export class BillEditorComponent implements OnInit {
 
   private _save() {
     this._service.save(this.formBill.value).subscribe((data) => {
-      this._notificator.sucess(data);
+      this._notificator.sucess("Bill saved successfully");
       this._cleanForm();
     });
   }
 
   private _update() {
     this._service.update(this.formBill.value).subscribe((data) => {
-      this._notificator.sucess(data);
+      this._notificator.sucess("Bill updated successfully");
       this._cleanForm();
+      this._router.navigate(["bills"]);
     });
   }
 
@@ -107,7 +108,10 @@ export class BillEditorComponent implements OnInit {
       ],
       value: [this._bill.value, [Validators.required]],
       category: [this._bill.category, [Validators.required]],
-      dateBill: [this._dateUtil.convertToStringWithDashUSA(this._bill.dateBill), [Validators.required]]
+      dateBill: [
+        this._dateUtil.convertToStringWithDashUSA(this._bill.dateBill),
+        [Validators.required],
+      ],
     });
   }
 

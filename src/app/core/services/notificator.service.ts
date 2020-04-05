@@ -1,16 +1,21 @@
 import { Injectable } from "@angular/core";
+import { ToastrService } from "ngx-toastr";
 
 @Injectable({
   providedIn: "root",
 })
 export class NotificatorService {
-  constructor() {}
+  constructor(private toastr: ToastrService) {}
 
   error(error) {
-    console.log(error.message);
+    if (error.message) {
+      this.toastr.error(error.message, "");
+    } else {
+      this.toastr.error("an unexpected error occurred", "");
+    }
   }
 
   sucess(msg) {
-    console.log(msg);
+    this.toastr.success(msg, "");
   }
 }

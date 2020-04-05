@@ -56,11 +56,15 @@ export class CategoryEditorComponent implements OnInit {
     }
   }
 
+  goBack() {
+    this._router.navigate(['categories']);
+  }
+
   private _save() {
     this._service.save(this.formCategory.value)
       .subscribe(
-        (data) => {
-          this._notificator.sucess(data);
+        () => {
+          this._notificator.sucess('Category successfully saved');
           this._cleanForm();
         }
       )
@@ -70,9 +74,10 @@ export class CategoryEditorComponent implements OnInit {
   private _update() {
     this._service.update(this.formCategory.value)
       .subscribe(
-        (data) => {
-          this._notificator.sucess(data);
+        () => {
+          this._notificator.sucess("Category updated successfully");
           this._cleanForm();
+          this._router.navigate(['categories']);
         }
       )
   }
@@ -94,9 +99,4 @@ export class CategoryEditorComponent implements OnInit {
       ],
     });
   }
-
-  goBack() {
-    this._router.navigate(['categories']);
-  }
-
 }
