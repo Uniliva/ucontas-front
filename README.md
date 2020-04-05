@@ -15,8 +15,8 @@ Esta aplicação gera uma imagem do docker atraves do Travis CI (https://travis-
 
 Para facilitar o acesso, esse projeto foi ajustado, através da branch _heroku-version_, para ser executado no heroku:
 
-ucontas-front: https://ucontas-front.herokuapp.com/
-swagger ucontas-api: https://ucontas-api.herokuapp.com/swagger-ui.html
+- ucontas-front: https://ucontas-front.herokuapp.com/
+- swagger ucontas-api: https://ucontas-api.herokuapp.com/swagger-ui.html
 
 ---
 
