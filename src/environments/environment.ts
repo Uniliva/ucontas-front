@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  base_url: 'http://localhost:9090'
+  base_url: 'https://ucontas-api.herokuapp.com'
 };
 
 /*
