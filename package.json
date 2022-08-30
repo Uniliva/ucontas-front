@@ -2,7 +2,7 @@
   "name": "ucontas-front",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+    "ng": "ng update @angular/core@10 @angular/cli@10",
     "start": "ng serve",
     "build": "ng build --prod",
     "test": "echo 'skipping teste'",
