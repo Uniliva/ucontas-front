@@ -45,4 +45,3 @@ ng serve
 
 Você também, pode usar essa aplicação através do docker, para isso acesse : https://github.com/Uniliva/ucontas-installer e siga as intruções para instalação.
 
----
